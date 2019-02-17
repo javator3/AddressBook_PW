@@ -29,11 +29,12 @@
                            <children>
                               <AnchorPane layoutX="-27.0" layoutY="26.0" prefHeight="372.8" prefWidth="187.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <TableView fx:id="personTableView"  layoutX="-27.0" layoutY="28.0" prefHeight="372.8" prefWidth="187.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <TableView onMouseClicked="#selectedPerson"  fx:id="personTableView" layoutX="-27.0" layoutY="28.0" prefHeight="372.8" prefWidth="187.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columns>
                                         <TableColumn fx:id="nameCol"  prefWidth="101.59997099637985" text="Name" />
                                         <TableColumn fx:id="lastName"  prefWidth="85.60004425048828" text="Lastname" />
                                       </columns>
+
                                     </TableView>
                                  </children>
                               </AnchorPane>
@@ -71,10 +72,10 @@
                                           <Label fx:id="telephoneLabel"   text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                        </children>
                                     </GridPane>
-                                    <Button contentDisplay="BOTTOM" layoutX="116.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Edit" textAlignment="CENTER" />
-                                    <Button contentDisplay="BOTTOM" layoutX="193.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Delete" textAlignment="CENTER" />
-                                    <Button contentDisplay="BOTTOM" layoutX="281.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Save" textAlignment="CENTER" />
-                                    <Button contentDisplay="BOTTOM" layoutX="30.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="New" textAlignment="CENTER" />
+                                    <Button fx:id="editPerson"  onAction="#editPerson"   contentDisplay="BOTTOM" layoutX="116.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Edit" textAlignment="CENTER" />
+                                    <Button    fx:id="deletePerson"    onAction="#deleteMarkedPerson"  contentDisplay="BOTTOM" layoutX="193.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Delete" textAlignment="CENTER" />
+                                    <Button  fx:id="save" onAction="#saveListToJSON"  contentDisplay="BOTTOM" layoutX="281.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Save" textAlignment="CENTER" />
+                                    <Button  fx:id="newPerson" onAction="#loadNewPerson" contentDisplay="BOTTOM" layoutX="30.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="New" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                            </children>
