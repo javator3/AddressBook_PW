@@ -11,17 +11,17 @@ public class PersonString {
     private String lastname;
     private String street;
     private String city;
-    private String zipCode;
+    private String postcode;
     private String telephone;
 
     public PersonString(){}
 
-    public PersonString(String name, String lastname, String street, String city, String zipCode, String telephone) {
+    public PersonString(String name, String lastname, String street, String city, String postcode, String telephone) {
         this.name = name;
         this.lastname = lastname;
         this.street = street;
         this.city = city;
-        this.zipCode = zipCode;
+        this.postcode = postcode;
         this.telephone = telephone;
     }
 
@@ -32,7 +32,7 @@ public class PersonString {
                 ", lastname='" + lastname + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
-                ", zipCode='" + zipCode + '\'' +
+                ", postcode='" + postcode + '\'' +
                 ", telephone='" + telephone + '\'' +
                 '}';
     }
@@ -46,13 +46,13 @@ public class PersonString {
                 Objects.equals(lastname, that.lastname) &&
                 Objects.equals(street, that.street) &&
                 Objects.equals(city, that.city) &&
-                Objects.equals(zipCode, that.zipCode) &&
+                Objects.equals(postcode, that.postcode) &&
                 Objects.equals(telephone, that.telephone);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, lastname, street, city, zipCode, telephone);
+        return Objects.hash(name, lastname, street, city, postcode, telephone);
     }
 
     public String getName() {
@@ -87,12 +87,12 @@ public class PersonString {
         this.city = city;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getPostcode() {
+        return postcode;
     }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 
     public String getTelephone() {

@@ -40,7 +40,7 @@ public class PersonView {
         try {
             person = objectMapper.readValue(file, PersonString[].class);
             for (PersonString e : person) {
-                personList.add(new Person(e.getName(), e.getLastname(), e.getStreet(), e.getCity(), e.getZipCode(), e.getTelephone()));
+                personList.add(new Person(e.getName(), e.getLastname(), e.getStreet(), e.getCity(), e.getPostcode(), e.getTelephone()));
             }
         } catch (IOException e) {
             e.printStackTrace();
