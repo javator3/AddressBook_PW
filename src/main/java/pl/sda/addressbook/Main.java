@@ -15,7 +15,6 @@ public class Main extends Application {
 
         PersonView personView = new PersonView(primaryStage);
         personView.loadView();
-//        personView.loadNewPersonView();
     }
 
 }

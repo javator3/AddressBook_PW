@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.view.PersonView;
 
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -33,7 +32,6 @@ public class NewPersonController implements Initializable {
     @FXML
     private TextField numerTelefonu;
 
-
     @FXML
     private Button savButton;
 
@@ -51,7 +49,6 @@ public class NewPersonController implements Initializable {
                 kodPocztowy.getText(),
                 numerTelefonu.getText()
         ));
-
     }
 
     public void closeWindow(ActionEvent actionEvent) {
@@ -63,14 +60,8 @@ public class NewPersonController implements Initializable {
         this.personView = personView;
     }
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
     }
-
-//    public void setPersonView(PersonView personView) {
-//        personView.getPersonList().add(new Person("imie"))
-//    }
 }

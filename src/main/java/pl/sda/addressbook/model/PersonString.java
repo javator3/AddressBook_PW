@@ -11,7 +11,8 @@ public class PersonString {
     private String postcode;
     private String telephone;
 
-    public PersonString(){}
+    public PersonString() {
+    }
 
     public PersonString(String name, String lastname, String street, String city, String postcode, String telephone) {
         this.name = name;

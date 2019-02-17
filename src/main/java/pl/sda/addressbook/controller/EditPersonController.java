@@ -9,11 +9,10 @@ import javafx.stage.Stage;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.view.PersonView;
 
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EditPersonController implements Initializable{
+public class EditPersonController implements Initializable {
 
     @FXML
     private TextField nameTextField;
@@ -45,7 +44,6 @@ public class EditPersonController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
     public void savePerson(ActionEvent actionEvent) {
@@ -61,7 +59,7 @@ public class EditPersonController implements Initializable{
         stage.close();
     }
 
-    public void closeWindow(ActionEvent actionEvent){
+    public void closeWindow(ActionEvent actionEvent) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
@@ -69,7 +67,6 @@ public class EditPersonController implements Initializable{
     public void setPersonView(PersonView personView) {
         this.personView = personView;
     }
-
 
     public void setPerson(Person person) {
         nameTextField.setText(person.getName());

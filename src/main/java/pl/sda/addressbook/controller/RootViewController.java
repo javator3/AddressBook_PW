@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.view.PersonView;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -90,10 +91,9 @@ public class RootViewController implements Initializable {
     public void deleteMarkedPerson() {
         int index = personTableView.getSelectionModel().getFocusedIndex();
         personView.getPersonList().remove(index);
-
     }
 
-    public void selectedPerson (MouseEvent mouseEvent) {
+    public void selectedPerson(MouseEvent mouseEvent) {
         Person person = personTableView.getSelectionModel().getSelectedItem();
         nameLabel.setText(person.getName());
         lastnameLabel.setText(person.getLastname());
@@ -103,7 +103,7 @@ public class RootViewController implements Initializable {
         telephoneLabel.setText(person.getTelephone());
     }
 
-    public void editPerson (ActionEvent actionEvent) {
+    public void editPerson(ActionEvent actionEvent) {
         int index = personTableView.getSelectionModel().getFocusedIndex();
         Person person = personTableView.getSelectionModel().getSelectedItem();
         personView.loadPersonEdit(index);
