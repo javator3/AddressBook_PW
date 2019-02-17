@@ -1,7 +1,6 @@
 package pl.sda.addressbook.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,17 +11,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.view.PersonView;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
 public class RootViewController implements Initializable {
-
 
     @FXML
     private Label nameLabel;
@@ -37,7 +32,7 @@ public class RootViewController implements Initializable {
     private Label cityLabel;
 
     @FXML
-    private Label postalCodeLabel;
+    private Label postCodeLabel;
 
     @FXML
     private Label telephoneLabel;
@@ -104,7 +99,7 @@ public class RootViewController implements Initializable {
         lastnameLabel.setText(person.getLastname());
         streetLabel.setText(person.getStreet());
         cityLabel.setText(person.getCity());
-        postalCodeLabel.setText(person.getPostcode());
+        postCodeLabel.setText(person.getPostcode());
         telephoneLabel.setText(person.getTelephone());
     }
 

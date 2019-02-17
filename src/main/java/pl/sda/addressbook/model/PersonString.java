@@ -1,11 +1,8 @@
 package pl.sda.addressbook.model;
 
-import javafx.beans.property.StringProperty;
-
 import java.util.Objects;
 
 public class PersonString {
-
 
     private String name;
     private String lastname;

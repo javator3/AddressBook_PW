@@ -1,18 +1,1 @@
-[
-  {
-    "name": "fdsf",
-    "lastname": "fsdf",
-    "street": "",
-    "city": "",
-    "postcode": "",
-    "telephone": ""
-  },
-  {
-    "name": "aaaaa",
-    "lastname": "aaaaa",
-    "street": "",
-    "city": "",
-    "postcode": "",
-    "telephone": ""
-  }
-]
+[{"name":"Paweł","lastname":"Igaweł","street":"Wąska 15","city":"Beverry Hills","postcode":"90-210","telephone":"555-555-555"},{"name":"Piotr","lastname":"Wieliczko","street":"Szeroka 5","city":"Brzozowo","postcode":"86-200","telephone":"781423317"}]

@@ -1,14 +1,8 @@
 package pl.sda.addressbook.model;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-
 import java.util.Objects;
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+
 public class Person {
 
     private StringProperty name;
@@ -17,7 +11,6 @@ public class Person {
     private StringProperty city;
     private StringProperty postcode;
     private StringProperty telephone;
-
 
     public Person(String name, String lastname,
                   String street, String city, String postcode, String telephone) {

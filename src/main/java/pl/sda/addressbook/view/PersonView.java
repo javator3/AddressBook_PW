@@ -12,7 +12,6 @@ import pl.sda.addressbook.controller.NewPersonController;
 import pl.sda.addressbook.controller.RootViewController;
 import pl.sda.addressbook.model.Person;
 import pl.sda.addressbook.model.PersonString;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -29,11 +28,6 @@ public class PersonView {
 
     public PersonView(Stage stage) {
         this.stage = stage;
-//        personList.add(new Person("Piotr", "Novak", "Szeroka", "Chelmno", "86-200", "123-123-123"));
-//        personList.add(new Person("Marcin", "Jabadoo", "Wąska", "Bydgoszcz", "32-437", "222-987-234"));
-//        personList.add(new Person("Michał", "Janicki", "Krótka", "Toruń", "87-100", "506-098-343"));
-//        personList.add(new Person("Jan", "Kowalski", "Długa", "Chełmża", "91-243", "111-222-333"));
-
         ObjectMapper objectMapper = new ObjectMapper();
         File file = new File("currentAddressList.json");
         PersonString[] person = null;
@@ -48,7 +42,6 @@ public class PersonView {
     }
 
     public void loadView() {
-        //poniższe tworzy dostęp do pól RootView - wiązanie się z kontrolerem
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/RootView.fxml"));
         try {
@@ -73,7 +66,6 @@ public class PersonView {
             e.printStackTrace();
         }
         Parent parent = loader.getRoot();
-
         NewPersonController newPersonController = loader.getController();
         newPersonController.setPersonView(this);
         personStage.setScene(new Scene(parent, 650, 400));
@@ -82,7 +74,6 @@ public class PersonView {
 
     public void cancelButton() {
         personStage.close();
-
     }
 
     public void saveButtonToJson() {
@@ -111,6 +102,5 @@ public class PersonView {
         EditPersonController editPersonController = loader.getController();
         editPersonController.setIndex(index);
         editPersonController.setPersonView(this);
-
     }
 }
